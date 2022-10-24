@@ -6,7 +6,7 @@ apt install nano
 apt install git 
 apt install apache2 
 apt install mysql-server 
-apt install node 
+apt install nodejs
 apt install npm 
 apt install zip 
 apt install unzip
