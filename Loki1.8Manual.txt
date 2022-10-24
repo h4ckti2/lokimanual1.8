@@ -2,7 +2,14 @@
 su - root
 cd ~
 sudo apt update
-apt install nano git apache2 mysql-server node npm zip unzip
+apt install nano 
+apt install git 
+apt install apache2 
+apt install mysql-server 
+apt install node 
+apt install npm 
+apt install zip 
+apt install unzip
 sudo apt install software-properties-common ca-certificates lsb-release apt-transport-https 
 add-apt-repository ppa:ondrej/php 
 sudo apt update 
